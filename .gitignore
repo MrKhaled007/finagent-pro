@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pkl
+*.pyc
+reports/
+.chromadb/
+venv/
+*.png
