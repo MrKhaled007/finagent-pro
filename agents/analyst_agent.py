@@ -32,8 +32,8 @@ class AnalystAgent(BaseAgent):
 
         # Risk prediction
         prob = self.risk_model.predict_proba(X)[0][1]  # probability of high risk
-        risk_score = round(prob * 100, 1)
-        risk_label = "HIGH" if prob >= 0.5 else "LOW"
+        risk_score = round(float(prob) * 100, 1)
+        risk_label = "HIGH" if float(prob) >= 0.5 else "LOW"
 
         # SHAP values
         shap_values = self.explainer.shap_values(X)
